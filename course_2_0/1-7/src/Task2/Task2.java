@@ -1,6 +1,14 @@
-package Java2Task1;
+/**
+ * @author Elizaveta Kornakova
+ * @version Calculator 1.0
+ */
+package Task2;
 import java.util.Scanner;
-public class Java2Task1 {
+public class Task2 {
+    /*
+    В первой простейшей версии калькулятора в первом задании использую только один метод main.
+    Несколько методов (+,-,/,*) появятся в следующих заданиях
+     */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите первое число:");
@@ -23,9 +31,14 @@ public class Java2Task1 {
                 res3 = num1 * num2;
                 System.out.printf("%.4f \n", res3);
                 break;
-            case "%":
-                res4 = num1 / num2;
-                System.out.printf("%.4f \n", res4);
+            case "/":
+                if (num2 != 0.0 ) {
+                    res4 = num1 / num2;
+                    System.out.printf("%.4f \n", res4);
+                }
+                else {
+                    System.out.println("Эй! Делить на ноль нельзя! Ты что, забыл?");
+                }
                 break;
         }
     }
